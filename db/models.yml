@@ -15,9 +15,9 @@ Review:
 Restaurant:
  - name: string
  - photo_url: string
- - city: string
+ - city_id: integer
  - state: string
- - genre: string
+ - genre_id: integer
 
 City:
   - city_id: integer
