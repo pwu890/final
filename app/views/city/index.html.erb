@@ -1,0 +1,7 @@
+<% City.read.order("name asc").each do |city| %>
+
+  <h2>
+    <%= link_to city["name"], "/city/#{city["id"]}" %>
+  </h2>
+
+<% end %>

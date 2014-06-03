@@ -1,0 +1,28 @@
+<% resta_id = params["id"] %>
+<% resta = Restaurant.read(resta_id) %>
+
+<%= image_tag resta["photo_url"], "width" => "300" %>
+<h1><%= resta["name"] %></h1>
+
+<b>Location:</b> <%= resta["city"] %>, <%= resta["state"] %>
+
+<% rev = Review.where("rest_id" => resta["id"]).average(:rating).to_i %>
+<h4>Average Rating:
+<% rev.times do %>&star;<% end %>
+</h4>
+
+<p>
+<h4>Your Reviews:</h4>
+<% Review.where("rest_id" => resta["id"]).each do |review| %>
+      <% the_user = User.find_by("id" => review["user_id"]) %>
+      <%= review.rating %> stars out of 5,
+          <% if the_user.present? %>
+            <i>by <%= the_user["name"] %></i>
+        <% end %>
+      <p>
+      What did you think about the restaurant?
+      <br>"<%= review.content %>"
+      </p>
+      <% end %>
+</p>
+

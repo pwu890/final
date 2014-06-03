@@ -1,0 +1,43 @@
+User:
+  - username: string
+  - password: string
+  - name: string
+
+Review:
+  - user_id: integer
+  - rest_id: integer
+  - rating: integer
+  - genre: integer
+  - city: string
+  - content: text
+  - created_at: datetime
+
+Restaurant:
+ - name: string
+ - photo_url: string
+ - city: string
+ - state: string
+ - genre: string
+
+City:
+  - city_id: integer
+  - name: string
+  - state: string
+
+Genre:
+  - name: string
+
+
+
+# Example table for a typical Book model.
+#
+# Book:
+#   - title: string
+#   - price: integer
+#   - author: string
+#   - summary: text
+#   - hardcover: boolean
+#
+# Follow the syntax exactly (colons and spacing are important).
+# Column type choices are: string, text, integer, and boolean.
+# You can have as many models as you want in this file.

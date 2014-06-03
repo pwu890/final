@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Foodie's Food Journal</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="header">
+  <div class="row">
+  <h1>The Foodie's Food Journal</h1>
+  </div>
+</div>
+
+<div class="row">
+  <%= link_to "Restaurants", "/restaurants" %> |
+  <%= link_to "Cities", "/city" %>
+</div>
+
+<%= yield %>
+
+</body>
+</html>

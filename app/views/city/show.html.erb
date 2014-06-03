@@ -1,0 +1,10 @@
+<% the_id = params["id"] %>
+<% the_city = City.read(the_id) %>
+<% resta = Restaurant.where("id" => the_city["id"]) %>
+
+<h2>Restaurants in <%= the_city["name"] %>, <%= the_city["state"] %></h2>
+
+<% resta.each do |restaurants| %>
+  <%= restaurants["name"] %>
+
+<% end %>
