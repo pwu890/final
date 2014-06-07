@@ -1,0 +1,40 @@
+<div class="page-header">
+<h1>Add a New Journal Entry</h1>
+</div>
+
+<div class="row">
+
+ <%= form_tag "/restaurants", "method" => "post" %>
+
+  <div class="form-group">
+    <%= label_tag "name", "What is the name of the restaurant?" %>
+    <%= text_field_tag "name", "", "class" => "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag "city", "City" %>
+    <%= select_tag "city",
+                    options_from_collection_for_select(City.read.order("name"),
+                    "id",
+                    "name"), "class" => "form-control" %>
+
+    <%= label_tag "state", "State" %>
+    <%= text_field_tag "state", "", "class" => "form-control" %>
+  </div>
+
+  <div class="form-group">
+        <%= label_tag "genre", "Choose a genre" %>
+        <%= select_tag "genre",
+                       options_from_collection_for_select(Genre.read.order("name"),
+                        "id",
+                        "name"), "class" => "form-control" %>
+      </div>
+
+  <div class="form-group">
+    <%= label_tag "photo", "Link to a photo of the restaurant" %>
+    <%= text_field_tag "photo", "", "class" => "form-control" %>
+  </div>
+
+  <%= submit_tag "Add this restaurant", "class" => "btn btn-lg btn-success" %> or <%= link_to "Cancel", "/restaurants" %>
+
+</form>

@@ -1,10 +1,13 @@
-<% resta_id = params["id"] %>
-<% resta = Restaurant.read(resta_id) %>
+<% the_id = params["id"] %>
+<% resta = Restaurant.read(the_id) %>
+<% location = City.find_by("id" => resta["city_id"]) %>
 
-<%= image_tag resta["photo_url"], "width" => "300" %>
+<p><%= image_tag resta["photo_url"], "width" => "300" %></p>
 <h1><%= resta["name"] %></h1>
 
-<b>Location:</b> <%= resta["city"] %>, <%= resta["state"] %>
+<b>Location:</b>
+<%= location["name"] %>, <%= location["state"] %>
+
 
 <% rev = Review.where("rest_id" => resta["id"]).average(:rating).to_i %>
 <h4>Average Rating:

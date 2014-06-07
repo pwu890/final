@@ -1,0 +1,9 @@
+<h2>What type of food are you looking for?</h2>
+
+<% Genre.read.order("name asc").each do |gen| %>
+
+  <h3>
+    <%= link_to gen["name"], "/genre/#{gen["id"]}" %>
+  </h3>
+
+<% end %>

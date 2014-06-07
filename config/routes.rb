@@ -5,6 +5,10 @@ Final::Application.routes.draw do
 
   # Resource: Restaurants
 
+  # -- Create
+  get "/restaurants/new" => 'restaurants#new'
+  post "/restaurants" => 'restaurants#create'
+
   # -- Read
   get "/restaurants" => 'restaurants#index'
   get "/restaurants/:id" => 'restaurants#show'
@@ -15,5 +19,13 @@ Final::Application.routes.draw do
   # -- Read
   get "/city" => 'city#index'
   get "/city/:id" => 'city#show'
+
+
+  # Resource: Genres
+
+  # -- Read
+  get "/genre" => 'genre#index'
+  get "/genre/:id" => 'genre#show'
+
 
 end

@@ -5,6 +5,6 @@
 <h2>Restaurants in <%= the_city["name"] %></h2>
 
 <% restaurants.each do |resta| %>
-  <%= resta["name"] %>
+  <p><%= link_to resta["name"], "/restaurants/#{resta["id"]}" %></p>
 
 <% end %>
