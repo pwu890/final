@@ -1,12 +1,14 @@
 <div class="container">
 
-<% Restaurant.read.order("name asc").each do |resta| %>
 
+<% Restaurant.read.order("name asc").each do |resta| %>
+<div class="col-md-4">
   <h2>
     <%= link_to resta["name"], "/restaurants/#{resta["id"]}" %>
   </h2>
   <%= image_tag resta["photo_url"], "width" => "150" %>
-
+</div>
 <% end %>
+
 
 </div>

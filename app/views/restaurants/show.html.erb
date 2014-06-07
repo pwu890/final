@@ -4,6 +4,7 @@
 <% location = City.find_by("id" => resta["city_id"]) %>
 <% type = Genre.find_by("id" => resta["genre_id"]) %>
 
+<div class="col-md-4">
 <p><%= image_tag resta["photo_url"], "width" => "300" %></p>
 <h1><%= resta["name"] %></h1>
 
@@ -25,8 +26,9 @@ Average Food Rating:
 <% rev_food.times do %>&star;<% end %>
 </b>
 </p>
+</div>
 
-<div class="row">
+<div class="col-md-4">
 <h2>Log your meal/experience!</h2>
 
 <%= form_tag "/reviews" do %>
@@ -50,7 +52,7 @@ Average Food Rating:
     <% end %>
 </div>
 
-<p>
+<div class="col-md-4">
 <h2>Your Entries</h2>
 <% Review.where("rest_id" => resta["id"]).each do |review| %>
       <h3>Here's what I thought:</h3>
@@ -67,5 +69,5 @@ Average Food Rating:
       <br><%= review.food_content %>
       </p>
       <% end %>
-</p>
+</div>
 </div>
