@@ -6,10 +6,10 @@ User:
 Review:
   - user_id: integer
   - rest_id: integer
-  - rating: integer
-  - genre: integer
-  - city: string
-  - content: text
+  - rest_rating: integer
+  - rest_content: text
+  - food_rating: integer
+  - food_content: text
   - created_at: datetime
 
 Restaurant:

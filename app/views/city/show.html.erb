@@ -1,3 +1,5 @@
+<div class="container">
+
 <% the_id = params["id"] %>
 <% the_city = City.read(the_id) %>
 <% restaurants = Restaurant.where("city_id" => the_city["id"]) %>
@@ -8,3 +10,5 @@
   <p><%= link_to resta["name"], "/restaurants/#{resta["id"]}" %></p>
 
 <% end %>
+
+</div>

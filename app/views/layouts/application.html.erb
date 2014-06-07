@@ -2,9 +2,11 @@
 <html>
 <head>
   <title>The Foodie's Food Journal</title>
+  <%= stylesheet_link_tag    "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
 
@@ -14,11 +16,20 @@
   </div>
 </div>
 
-<div class="row">
-  <%= link_to "Restaurants", "/restaurants" %> |
-  <%= link_to "Cities", "/city" %> |
-  <%= link_to "Genre", "/genre" %> |
-  <%= link_to "Add a new restaurant", "/restaurants/new" %>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Restaurants", "/restaurants" %></li>
+        <li><%= link_to "Cities", "/city" %></li>
+        <li><%= link_to "Genres", "/genre" %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <button type="button" class="btn btn-default navbar-btn"><%= link_to "Add a new restaurant", "/restaurants/new" %></button>
+      </ul>
+    </div>
+  </div>
+</nav>
 </div>
 
 <%= yield %>

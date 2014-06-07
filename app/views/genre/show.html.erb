@@ -1,3 +1,5 @@
+<div class="container">
+
 <% the_id = params["id"] %>
 <% the_genre = Genre.read(the_id) %>
 <% restaurants = Restaurant.where("genre_id" => the_genre["id"]) %>
@@ -6,3 +8,5 @@
   <p><%= link_to resta["name"], "/restaurants/#{resta["id"]}" %></p>
 
 <% end %>
+
+</div>

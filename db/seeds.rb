@@ -22,5 +22,5 @@ phoebe = User.create("username" => "instantphoebe", "password" => "clomps", "nam
 tim = User.create("username" => "tim", "password" => "othy", "name" => "Tim Noce")
 
 Review.delete_all
-Review.create("user_id" => phoebe["id"], "rest_id" => cozy_noodle["id"], "rating" => 3, "content" => "Satisfying, but salty food.")
-Review.create("user_id" => phoebe["id"], "rest_id" => farmhouse["id"], "rating" => 4, "content" => "Tasty, but expensive.")
+Review.create("user_id" => phoebe["id"], "rest_id" => cozy_noodle["id"], "rest_rating" => 4, "rest_content" => "Good ambiance.", "food_rating" => 3, "food_content" => "A good staple.")
+Review.create("user_id" => phoebe["id"], "rest_id" => farmhouse["id"], "rest_rating" => 4, "rest_content" => "Nice rustic vibe.", "food_rating" => 4, "food_content" => "Farm to table trendy.")

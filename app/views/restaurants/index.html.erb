@@ -1,3 +1,5 @@
+<div class="container">
+
 <% Restaurant.read.order("name asc").each do |resta| %>
 
   <h2>
@@ -6,3 +8,5 @@
   <%= image_tag resta["photo_url"], "width" => "150" %>
 
 <% end %>
+
+</div>

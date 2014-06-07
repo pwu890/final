@@ -1,7 +1,7 @@
 Final::Application.routes.draw do
 
   # Home page
-  get "/" => "restaurants#index"
+  get "/" => "index#index"
 
   # Resource: Restaurants
 
@@ -12,6 +12,24 @@ Final::Application.routes.draw do
   # -- Read
   get "/restaurants" => 'restaurants#index'
   get "/restaurants/:id" => 'restaurants#show'
+
+
+  # Resource: Reviews
+
+  # --- Create
+  get "/reviews/new" => 'reviews#new'
+  post "/reviews" => 'reviews#create'
+
+  # --- Read
+  get "/reviews" => 'reviews#index'
+  get "/reviews/:id" => 'reviews#show'
+
+  # -- Update
+  get "/reviews/:id/edit" => 'reviews#edit'
+  patch "/reviews/:id" => 'reviews#update'
+
+  # --- Delete
+  delete "/reviews/:id" => 'reviews#destroy'
 
 
   # Resource: Cities
