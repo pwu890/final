@@ -4,6 +4,6 @@ Requirements I've fulfilled (I hope, haha):
 - Implement at least three models
 - Populate the database via seed data
 - Proper use of a CSS framework like Bootstrap
-- Deploy your app to a live internet URL ()
+- Deploy your app to a live internet URL (http://fathomless-sierra-9549.herokuapp.com)
 - Demonstrate best-practice use of Rails MVC architecture
 - Allow users to sign up, sign in, and sign out
