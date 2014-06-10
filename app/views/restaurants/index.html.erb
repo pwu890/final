@@ -6,7 +6,7 @@
 </p>
 
 <% Restaurant.read.order("name asc").each do |resta| %>
-<div class="col-md-3">
+<div class="col-md-4">
   <h2>
     <%= link_to resta["name"], "/restaurants/#{resta["id"]}" %>
   </h2>
