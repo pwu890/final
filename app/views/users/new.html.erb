@@ -1,0 +1,33 @@
+<div class="container">
+
+<h1>Add a New User</h1>
+
+<div class="row">
+  <div class="col-md-4">
+
+    <p><%= @message %></p>
+
+    <%= form_tag "/users", "method" => "post"  %>
+
+      <div class="form-group">
+        <%= label_tag "username", "Pick a username:" %>
+        <%= text_field_tag "username", "", "class" => "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag "password", "Pick a password" %>
+        <%= password_field_tag "password", "", "class" => "form-control" %>
+
+      </div>
+
+      <div class="form-group">
+        <%= label_tag "name", "What's your name?" %>
+        <%= text_field_tag "name", "", "class" => "form-control" %>
+      </div>
+
+      <%= submit_tag "Add me as a user", "class" => "btn btn-lg btn-danger" %> or <%= link_to "Just kidding", "/" %>
+
+    </form>
+</div>
+</div>
+</div>
