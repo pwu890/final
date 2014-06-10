@@ -1,28 +1,9 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Requirements I've fulfilled (I hope, haha):
+- Implement at least three models
+- Populate the database via seed data
+- Proper use of a CSS framework like Bootstrap
+- Deploy your app to a live internet URL ()
+- Demonstrate best-practice use of Rails MVC architecture
+- Allow users to sign up, sign in, and sign out

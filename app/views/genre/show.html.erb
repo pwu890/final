@@ -4,6 +4,8 @@
 <% the_genre = Genre.read(the_id) %>
 <% restaurants = Restaurant.where("genre_id" => the_genre["id"]) %>
 
+<h2><%= the_genre["name"] %> Restaurants</h2>
+
 <% restaurants.each do |resta| %>
   <p><%= link_to resta["name"], "/restaurants/#{resta["id"]}" %></p>
 

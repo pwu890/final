@@ -11,21 +11,27 @@
 <body>
 
 <div class="header">
-  <div class="row">
   <center><%= image_tag "FoodieBanner.png" %></center>
-  </div>
 </div>
 
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+        <li><%= link_to "Home", "/" %></li>
         <li><%= link_to "Restaurants", "/restaurants" %></li>
         <li><%= link_to "Cities", "/city" %></li>
         <li><%= link_to "Genres", "/genre" %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      <button type="button" class="btn btn-default navbar-btn"><%= link_to "Add a new restaurant", "/restaurants/new" %></button>
+        <% user = User.find_by("id" => cookies["user_id"]) %>
+          <% if user.present? %>
+            <p class="navbar-text">Hello <%= user["name"] %>!</p>
+              <li><%= link_to "Sign Out", "/logout" %></li>
+            <% else %>
+              <li><%= link_to "Sign In", "/login" %></li>
+              <li><%= link_to "New User?", "/users/new" %></li>
+        <% end %>
       </ul>
     </div>
   </div>

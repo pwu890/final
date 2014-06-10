@@ -1,10 +1,10 @@
 <div class="container">
 
-<div class="page-header">
 <h1>Add a Restaurant</h1>
-</div>
 
+<div class="row">
 <div class="col-md-4">
+
  <%= form_tag "/restaurants", "method" => "post" %>
 
   <div class="form-group">
@@ -37,4 +37,9 @@
   </div>
 
   <%= submit_tag "Add this restaurant", "class" => "btn btn-lg btn-danger" %> or <%= link_to "Cancel", "/restaurants" %>
+
+  </form>
 </div>
+</div>
+</div>
+

@@ -1,14 +1,17 @@
 <div class="container">
 
 
+<p class="text-left">
+  <a class="btn btn-danger btn-md" role="button" href="/restaurants/new">Add a new restaurant</a>
+</p>
+
 <% Restaurant.read.order("name asc").each do |resta| %>
-<div class="col-md-4">
+<div class="col-md-3">
   <h2>
     <%= link_to resta["name"], "/restaurants/#{resta["id"]}" %>
   </h2>
   <%= image_tag resta["photo_url"], "width" => "150" %>
 </div>
 <% end %>
-
 
 </div>
