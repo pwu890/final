@@ -13,7 +13,6 @@ medi = Genre.create("name" => "Mediterranean")
 
 Restaurant.delete_all
 cozy_noodle = Restaurant.create("name" => "Cozy Noodle", "city_id" => evan.id, "state" => "IL", "genre_id" => asia.id, "photo_url" => "cozy.jpg")
-found = Restaurant.create("name" => "Found", "city_id" => evan.id, "state" => "IL", "genre_id" => amer.id, "photo_url" => "found.jpg")
 le_petit_paris = Restaurant.create("name" => "Le Petit Paris", "city_id" => chi.id, "state" => "IL", "genre_id" => fren.id, "photo_url" => "paris.jpg")
 farmhouse = Restaurant.create("name" => "Farmhouse", "city_id" => evan.id, "state" => "IL", "genre_id" => amer.id, "photo_url" => "farmhouse.jpg")
 
